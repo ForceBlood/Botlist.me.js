@@ -1,0 +1,13 @@
+{
+  "name": "Botlist.me.js",
+  "version": "1.0.0",
+  "description": "Official node.js API wrapper of Botlist.me",
+  "main": "index.js",
+  "author": "ForceBlood",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "events": "^3.3.0",
+    "node-fetch": "^3.2.6"
+  }
+}
