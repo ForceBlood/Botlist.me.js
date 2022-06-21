@@ -8,6 +8,8 @@
   "private": false,
   "dependencies": {
     "events": "^3.3.0",
-    "node-fetch": "^3.2.6"
+    "https": "^1.0.0",
+    "node-fetch": "^3.2.6",
+    "querystring": "^0.2.1"
   }
 }
