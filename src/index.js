@@ -151,19 +151,7 @@ class BotlistMe extends EventEmitter {
           data.shard_count = this.client.shards.size;
         }
       }
-      const response = await this._request('post', 'bots/stats', data, true);
-      return response.body;
-    }
-  
-    /**
-     * Gets stats from a bot.
-     * @param {string} id The ID of the bot you want to get the stats from.
-     * @returns {Promise<Object>}
-     */
-    async getStats(id) {
-      if (!id && !this.client) throw new Error('getStats requires id as argument');
-      if (!id) id = this.client.user.id;
-      const response = await this._request('get', `bots/${id}/stats`);
+      const response = await this._request('post', `bots/${this.client.user.id}/stats`, data, true);
       return response.body;
     }
   
@@ -191,42 +179,14 @@ class BotlistMe extends EventEmitter {
     }
   
     /**
-     * Gets a list of bots matching your query.
-     * @param {Object} query The query for the search.
-     * @returns {Promise<Object>}
-     */
-    async getBots(query) {
-      const response = await this._request('get', 'bots', query);
-      return response.body;
-    }
-  
-    /**
-     * Gets votes from your bot.
-     * @returns {Promise<Array>}
-     */
-    async getVotes() {
-      const response = await this._request('get', 'bots/votes', undefined, true);
-      return response.body;
-    }
-  
-    /**
      * Returns true if a user has voted for your bot in the last 24h.
      * @param {string} id The ID of the user to check for.
      * @returns {Promise<boolean>}
      */
     async hasVoted(id) {
       if (!id) throw new Error('hasVoted requires id as argument');
-      const response = await this._request('get', 'bots/check', { userId: id }, true);
+      const response = await this._request('get', `bots/${this.client.user.id}/voted`, { userId: id }, true);
       return !!response.body.voted;
-    }
-  
-    /**
-     * Returns true if the weekend multiplier is currently active.
-     * @returns {Promise<boolean>}
-     */
-    async isWeekend() {
-      const response = await this._request('get', 'weekend');
-      return response.body.is_weekend;
     }
   }
   
