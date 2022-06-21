@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Official node.js API wrapper of Botlist.me",
   "main": "index.js",
-  "author": "forceblood",
+  "author": "ForceBlood",
   "license": "MIT",
   "private": false,
   "dependencies": {
@@ -11,5 +11,20 @@
     "https": "^1.0.0",
     "node-fetch": "^3.2.6",
     "querystring": "^0.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForceBlood/Botlist.me.js.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "list",
+    "api",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/ForceBlood/Botlist.me.js/issues"
+  },
+  "homepage": "https://docs.botlist.me"
 }
