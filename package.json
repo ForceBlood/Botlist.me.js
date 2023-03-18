@@ -1,6 +1,6 @@
 {
   "name": "botlist.me.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Official node.js API wrapper of Botlist.me",
   "main": "index.js",
   "author": "ForceBlood",
