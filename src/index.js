@@ -11,7 +11,7 @@ const isLib = (library, client) => {
     }
 };
 
-const isASupportedLibrary = client => isLib('discord.js', client) || isLib('eris', client);
+const isASupportedLibrary = client => isLib('discord.js', client) || isLib('eris', client) || isLib('oceanic.js', client);
 
 class BotlistMe extends EventEmitter {
     /**
